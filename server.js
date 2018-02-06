@@ -20,7 +20,7 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
 MongoClient.connect('mongodb://babyPero:testtest@ds217898.mlab.com:17898/test-project', (err, client) => {
     if (err) return console.log(err)
     db = client.db('test-project') // database name
-}}
+})
 
 // top page - retrieve and render quotes
 app.get('/', function (req, res) {
