@@ -24,7 +24,7 @@ MongoClient.connect('mongodb://babyPero:testtest@ds217898.mlab.com:17898/test-pr
 
 // top page - retrieve and render quotes
 app.get('/', function (req, res) {
-    db.collection('quotes').find().toArray(function(err, result) {
+    db.collection('quotes').find().sort({"_id":-1}).toArray(function(err, result) {
 	if (err) return console.log(err)
 	console.log('-------')
 	console.log(result)
