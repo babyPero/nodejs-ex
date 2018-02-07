@@ -28,14 +28,22 @@
 	</form>
       </p>
 
-      <ul class="list-group">
-	<% for(var i=0; i<quotes.length; i++) {%>
-	   <li class="list-group-item">
-	     <span><%= quotes[i].name %>:</span>
-	     <span><%= quotes[i].quote %></span>
-	   </li>
+      <table class="table">
+	<thead class="thead-default">
+	  <tr>
+	    <th>Name</th>
+	    <th>Quotes</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <% for(var i=0; i<quotes.length; i++) {%>
+	     <tr>
+	       <td><%= quotes[i].name %></td>
+	       <td><%= quotes[i].quote %></td>
+	     </tr>
+	</tbody>
 	<% } %>
-      </ul>
+      </table>
     </div>
   </body>
 </html>
